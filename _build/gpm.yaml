@@ -1,0 +1,23 @@
+name: SimpleReviews
+version: 1.0.0-alpha
+lowCaseName: simplereviews
+namespace: SimpleReviews
+description: 'A simple extra for user reviews'
+author: halftrainedharry
+chunks:
+    - name: SimpleReviewsForm
+      description: Default form chunk to send a review
+    - name: SimpleReviewsTemplate
+      description: Default template chunk to output the reviews
+snippets:
+    - name: SimpleReviewsFormHook
+      description: A FormIt hook to add a review
+    - name: SimpleReviewsGetReviews
+      description: Display the reviews
+database:
+    tables:
+        - "\\SimpleReviews\\Model\\Review"
+menus:
+    -
+        text: simplereviews.menu
+        action: manage
