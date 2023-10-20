@@ -2,11 +2,14 @@
 use SimpleReviews\Model\Review;
 
 $formFields = $hook->getValues();
+$author = $formFields['author'];
 $content = $formFields['content'];
-//TODO: sanitize content
+// TODO: SANITIZE USER DATA
+// Sanitize all user input before saving it.
+// Don't output unvetted user input directly to the front-end to avoid security issues.
 
 $review = $modx->newObject(Review::class);
-$review->set('author', $formFields['author']);
+$review->set('author', $author);
 $review->set('content', $content);
 $review->set('published', false);
 $review->set('createdon', time());
