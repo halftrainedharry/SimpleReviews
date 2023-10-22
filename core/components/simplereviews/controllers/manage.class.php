@@ -16,6 +16,7 @@ class SimpleReviewsManageManagerController extends SimpleReviewsBaseManagerContr
     public function loadCustomCssJs(): void
     {
         $this->addLastJavascript($this->simplereviews->getOption('jsUrl') . 'mgr/widgets/manage.panel.js');
+        $this->addLastJavascript($this->simplereviews->getOption('jsUrl') . 'mgr/widgets/reviews.grid.js');
         $this->addLastJavascript($this->simplereviews->getOption('jsUrl') . 'mgr/sections/manage.js');
 
         $this->addHtml(

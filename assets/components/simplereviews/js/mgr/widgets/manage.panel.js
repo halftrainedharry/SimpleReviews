@@ -25,8 +25,9 @@ simplereviews.panel.Manage = function (config) {
                         layout: 'form',
                         items: [
                             {
-                                cls: 'main-wrapper',
-                               html: 'Greetings from John. Thank you for using GPM.'
+                                xtype: 'simplereviews-grid-reviews',
+                                preventRender: true,
+                                cls: 'main-wrapper'
                             }
                         ]
                     }

@@ -4,6 +4,7 @@ use SimpleReviews\Model\Review;
 $tpl = $modx->getOption('tpl', $scriptProperties, 'SimpleReviewsTemplate');
 
 $c = $modx->newQuery(Review::class);
+$c->where(['published' => true]);
 $c->sortby('createdon', 'DESC');
 $reviews = $modx->getCollection(Review::class, $c);
 
